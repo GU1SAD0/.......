@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Kids - Tu compañero en el TDAH</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #0078D7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #e3f2fd;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            color: white;
+            background-color: #0078D7;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background-color: #005bb5;
+        }
+
+        .options, .suboptions {
+            display: none; /* Ocultar por defecto */
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .options h2, .suboptions h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #0078D7;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Focus Kids</h1>
+            <p>Juntos superamos los retos del TDAH</p>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="img/niños-estudiando.jpg" alt="Niños concentrados estudiando">
+            <h2>Una aventura para crecer, aprender y enfocarte.</h2>
+            <p>Focus Kids te ofrece herramientas y recursos para mejorar la concentración y el aprendizaje.</p>
+            <button class="btn" onclick="showSection('studentOptions')">Soy Estudiante</button>
+            <button class="btn" onclick="showSection('parentOptions')">Soy Padre/Tutor</button>
+        </section>
+        <section class="options" id="studentOptions">
+            <h2>Para estudiantes</h2>
+            <div class="menu">
+                <h3>Lenguaje</h3>
+                <button class="btn" onclick="showSubSection('lecturas')">Lecturas</button>
+                <button class="btn" onclick="showSubSection('escrituras')">Escrituras</button>
+                <button class="btn" onclick="showSubSection('descripcion')">Descripción</button>
+                <button class="btn" onclick="showSubSection('memoria')">Memoria</button>
+                <button class="btn" onclick="showSubSection('dibujo')">Dibujo</button>
+                <button class="btn" onclick="showSubSection('canciones')">Canciones</button>
+            </div>
+        </section>
+        <!-- Subsecciones ocultas -->
+        <section class="suboptions" id="lecturas">
+            <h3>Lecturas</h3>
+            <p>Explora cuentos interactivos con preguntas al final.</p>
+        </section>
+        <section class="suboptions" id="escrituras">
+            <h3>Escrituras</h3>
+            <p>Actividades para marcar letras, líneas rectas y curvas.</p>
+        </section>
+        <section class="suboptions" id="descripcion">
+            <h3>Descripción</h3>
+            <p>Juegos para encontrar diferencias y aprender adjetivos.</p>
+        </section>
+        <section class="suboptions" id="memoria">
+            <h3>Memoria</h3>
+            <p>Juegos como memoramas para unir letras y números.</p>
+        </section>
+        <section class="suboptions" id="dibujo">
+            <h3>Dibujo</h3>
+            <p>Trazos sencillos y actividades para colorear.</p>
+        </section>
+        <section class="suboptions" id="canciones">
+            <h3>Canciones</h3>
+            <p>Playlist interactiva para identificar sonidos específicos.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Focus Kids. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.options').forEach(opt => opt.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        function showSubSection(subSectionId) {
+            document.querySelectorAll('.suboptions').forEach(sub => sub.style.display = 'none');
+            document.getElementById(subSectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
